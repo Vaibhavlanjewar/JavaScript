@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Notepad with text styling</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body bgcolor="sky blue">
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+  <div class="editor-wrapper">
+    <div class="toolbar">
+      <div class="group">
+        <button class="bold" onclick="bold()">B</button>
+        <button class="italic" onclick="italic()">I</button>
+        <button class="underline" onclick="underline()">U</button>
+      </div>
+      <div class="group">
+        <button class="text-color">Text Color</button>
+        <div class="text-colors">
+          <button onclick="setTextColor('black')" style="background-color: black;"></button>
+          <button onclick="setTextColor('red')" style="background-color: red;"></button>
+          <button onclick="setTextColor('blue')" style="background-color: blue;"></button>
+          <button onclick="setTextColor('green')" style="background-color: green;"></button>
+        </div>
+      </div>
+      <div class="group">
+        <button class="text-size">Text Size</button>
+        <div class="text-sizes">
+          <button onclick="setTextSize('12px')">12</button>
+          <button onclick="setTextSize('16px')">16</button>
+          <button onclick="setTextSize('20px')">20</button>
+          <button onclick="setTextSize('24px')">24</button>
+        </div>
+      </div>
+      <div class="group">
+        <button class="text-font">Text Font</button>
+        <div class="text-fonts">
+          <button onclick="setTextFont('Arial')">Arial</button>
+          <button onclick="setTextFont('Helvetica')">Helvetica</button>
+          <button onclick="setTextFont('Times New Roman')">Times New Roman</button>
+          <button onclick="setTextFont('Courier New')">Courier New</button>
+        </div>
+      </div>
+      <div class="group">
+        <button class="highlighter" onclick="toggleHighlighter()">Highlighter</button>
+        <div class="highlighter-colors">
+          <button onclick="setHighlighterColor('yellow')" style="background-color: yellow;"></button>
+          <button onclick="setHighlighterColor('pink')" style="background-color: pink;"></button>
+          <button onclick="setHighlighterColor('orange')" style="background-color: orange;"></button>
+          <button onclick="setHighlighterColor('green')" style="background-color: green;"></button>
+        </div>
+      </div>
+      <div class="group">
+        <button class="pencil" onclick="togglePencil()">Pencil</button>
+        <div class="pencil-colors">
+          <button onclick="setPencilColor('black')" style="background-color: black;"></button>
+          <button onclick="setPencilColor('red')" style="background-color: red;"></button>
+          <button onclick="setPencilColor('blue')" style="background-color: blue;"></button>
+          <button onclick="setPencilColor('green')" style="background-color: green;"></button>
+        </div>
+      </div>
+      <div class="group">
+        <button class="undo" onclick="undo()">Undo</button>
+        <button class="redo" onclick="redo()">Redo</button>
+      </div>
+    </div>
+    <div class="editor">
+      <div id="text-editor" contenteditable="true"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
