@@ -1,0 +1,66 @@
+<html>
+    <head>
+        <title>
+            simple Calculator 
+        </title>
+    </head>
+    <body bgcolor="pink">
+
+<center>
+     <h1> Simple Calculator</h1>  
+<input type="number" name ="first" id="first" step="any" /> <br/>
+
+Operation: <select id="ope">
+
+<option value="+">+</option>
+<option  value="-">-</option>
+<option  value="*">*</option>
+<option  value="/">/</option>
+
+</select><br/>
+
+<input type="number" name ="second" id="second" step="any" /> <br/>
+
+
+<button onclick="calc()" >Calculate</button><br/>
+
+<input type="text" name="" id="res" readonly=""/ >
+
+</center>
+    </body>
+<script>
+  
+/* 
+
+                 \/ |\| B |__
+-------------------------------------------------------       
+            Simple Calculator
+-------------------------------------------------------
+
+*/
+ 
+function calc(){
+var opr1=document.getElementById('first').value;
+var op2=document.getElementById('second').value;
+var ope=document.getElementById('ope').value;
+if(ope=='+'){
+    var res=parseInt(opr1) + parseInt(op2);
+}
+if(ope=='-'){
+    var res=parseInt(opr1) - parseInt(op2);
+ }
+ if(ope=='*'){
+    var res=parseInt(opr1) * parseInt(op2);
+ }
+ if(ope=='/'){
+    var res=parseInt(opr1) / parseInt(op2);
+ }
+
+ document.getElementById('res').value=res;
+
+}
+
+ 
+
+    </script>
+</html>

@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>
+            Functions in Javascript 
+        </title>
+    </head>
+    <body bgcolor="pink">
+<h1 id="main"></h1>
+<input type="text" name ="name" id="name">
+<button onclick="greet()"> Greet</button>
+<div class="greet">
+
+</div>
+
+    </body>
+
+
+
+    <script>
+/* 
+Functions in javascript 
+-- pre defined 
+-- User Define --defined by users       //vnbl 
+
+syntax --
+
+function functionName(parameter/no parameter){
+    func body 
+    -return 
+}
+
+-------------------------------------------------------       \/ |\| B |__
+               user defined Function
+-------------------------------------------------------
+
+*/
+ 
+function greet(){
+//alert("yes");
+
+var name=document.getElementById('name').value;
+//alert(name);
+var string="Hello  " + name;
+document.getElementsByClassName('greet')[0].innerHTML=string;
+
+}
+
+ 
+
+    </script>
+</html>

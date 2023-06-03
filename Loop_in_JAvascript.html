@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>
+            Loop in Javascript
+        </title>
+    </head>
+    <body bgcolor="pink">
+
+    </body>
+
+    <script>
+        /* 
+                           \/ |\| B |__
+        .....................................................
+                              Loop 
+        .....................................................
+
+        -it is used to repat a block of code until condition not satisfied 
+        -when we do same task again and again then we use loop 
+        -it Save time and leads to code reusability
+
+      ===========  for loop  ================
+
+        for(intialise;declare/test-condition;increment/decrement){
+            // Statement to be excuted if condition is true 
+
+        }
+
+
+        */
+document.write("Table of 16  by using For Loop <br>");
+for(var i=0;i<=10;i++){
+    document.write(16*i+ "<br>");
+
+}
+
+/*
+ .....................................................
+                While  Loop 
+ .....................................................
+ var x;
+while(x<=10){
+ condition 
+ incr/decre
+}
+
+-- once the condition become false ,the loop get Terminate 
+-- it is entry control loop
+*/
+document.write("<br><br>");
+document.write("<br>Table of 15  by using While Loop <br>");
+
+var x=1;
+while(x<=10){
+    document.write(15*x+"<br>");
+    x++;
+}
+
+/*
+.............................................................
+                   forEach loop
+.............................................................
+
+
+-A forEach loop is used to get data from js array or object
+- the methode calls a function once for each element in an array in order 
+ 
+syntax 
+
+var car1=new Array();
+car1=["BMW","AUDI","FERARI","ROLLS ROYCE","TATA SAFARI","FORTUNER","ENDEOVER","RANGE ROVER"];
+car1.forEach(myFunction):
+
+function myfunction(item,index,array){  // index and array are optional 
+    //body of function 
+
+}
+
+*/
+document.write("<br><br>");
+
+var car1=new Array();
+car1=["BMW","AUDI","FERARI","ROLLS ROYCE","TATA SAFARI","FORTUNER","ENDEOVER","RANGE ROVER"];
+car1.forEach(car);
+
+function car(item,index){
+    document.write(index+" =>"+ item + "<br>");  // item stands for ekement + index
+
+}
+document.write("<br><br>");
+
+// car2 func
+function car2(item,index,array){
+   array[index]=item + "0";
+
+}
+document.write("<br><br>");
+car1.forEach(after);
+ 
+function after(element,index){
+    document.write(index +" => "+ element +"<br>");
+
+}
+
+
+
+
+    </script>
+</html>

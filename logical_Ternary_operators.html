@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>
+            Logical and Ternary Operator 
+        </title>
+
+    </head>
+    <body bgcolor="pink ">
+<h1 id="res"> </h1>
+<h2 id="res1"> </h2>
+<h2 id="res2"> </h2>
+    </body>
+    <script>
+        /* 
+        a.Logical
+    1. && Logiacal and -- if any one/both conditions  false then resulut  false , otherwise true 
+    2. || if both false -- then false otherwise true
+    
+    3. Ternary Operator 
+    condition ? True : False 
+    
+*/
+
+var x=false ;
+var y=true;
+var z= x && y;
+
+document.getElementById('res').innerHTML=z;
+var z1=x || y;
+document.getElementById('res1').innerHTML=z1;
+
+var a=5;
+var b=6;
+var c;
+c= a>b ? "a is greater than b" : "b is greater than a " ;
+
+document.getElementById('res1').innerHTML=c;
+    </script>
+</html>

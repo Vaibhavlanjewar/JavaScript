@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>
+            get data from prompt function 
+        </title>
+    </head>
+    <body bgcolor="pink">
+Name: <i id="result"> </i><br>
+<button onclick="call()">Call</button>
+</body>
+
+<script>
+function call(){
+    var name=prompt("Enter Your name",""); // var result 
+                                          //document.write(result);
+    document.getElementById('result').innerHTML=name;
+
+}
+</script>
+
+</html>
