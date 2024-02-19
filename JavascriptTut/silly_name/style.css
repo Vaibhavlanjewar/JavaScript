@@ -1,0 +1,37 @@
+*{
+    background-color: black;
+}
+h1{
+    color:aliceblue;
+    background-color: rgb(18, 58, 107);
+    text-align: center;
+    padding: 40px;
+    border:35px;
+    margin:25px;
+    box-shadow: 6px 6px 10px rgb(163, 163, 163);
+    border-radius: 25px;
+}
+
+button{
+    color:burlywood;
+    background-color: darkslategrey;
+    font-size:20px;
+    border-radius: 25px;
+    padding: 20px;
+    border:39px;
+    margin:33px;
+    box-shadow: 6px 6px 10px rgb(86, 156, 144);
+
+}
+p{
+    background-color: rgb(20, 33, 58);
+    color: aliceblue;
+    border-radius: 25px;
+    padding: 40px;
+    margin:40px 20px 20px 410px;
+    display : inline-block;
+    box-shadow: 6px 6px 10px rgb(61, 54, 97);
+   text-align: center;
+   
+}
+

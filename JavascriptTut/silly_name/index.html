@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Silly Name Generator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Silly Name Generator</h1>
+    <button id="generateRandom">Generate Random Name</button>
+    <button id="generateAppropriate">Generate Appropriate Name</button>
+    <button id="generateInappropriate">Generate Inappropriate Name</button>
+    <p id="nameDisplay">Silly Name </p>
+
+    <script>
+      document.getElementById('generateRandom').addEventListener('click', () => generateName());
+      document.getElementById('generateAppropriate').addEventListener('click', () => generateName(true));
+      document.getElementById('generateInappropriate').addEventListener('click', () => generateName(false));
+
+      function generateName(onlyAppropriate) {
+        let query = '';
+        if (onlyAppropriate !== undefined) {
+          query = `?onlyAppropriate=${onlyAppropriate}`;
+        }
+        fetch(`http://localhost:3000/generate-name${query}`)
+          .then(response => response.json())
+          .then(data => {
+            document.getElementById('nameDisplay').textContent = data.name;
+          })
+          .catch(error => console.error('Error:', error));
+      }
+    </script>
+</body>
+</html>

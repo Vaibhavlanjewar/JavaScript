@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "silly-names-hun": "^1.1.3"
+  },
+  "name": "learning_npm",
+  "version": "1.0.0",
+  "description": "silly name generator",
+  "main": "j9_silly.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "vnbl",
+  "license": "ISC"
+}
