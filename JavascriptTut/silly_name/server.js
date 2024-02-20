@@ -10,6 +10,7 @@ app.use((req, res, next) => {
 });
 
 app.get('/generate-name', (req, res) => {
+ 
   const { onlyAppropriate } = req.query;
   let name;
   if (onlyAppropriate === 'true') {

@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "express": "^4.18.2",
+    "nodemailer": "^6.9.9"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "email-sender",
+  "version": "1.0.0",
+  "description": "my sec project ",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}

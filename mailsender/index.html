@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Email Sender</title>
+</head>
+<body>
+    <h2>Send an Email</h2>
+    <form id="emailForm">
+        To: <input type="email" id="to" required><br>
+        Subject: <input type="text" id="subject" required><br>
+        Message: <textarea id="text" required></textarea><br>
+        <button type="submit">Send Email</button>
+    </form>
+
+    <script>
+      document.getElementById('emailForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        const payload = {
+          to: document.getElementById('to').value,
+          subject: document.getElementById('subject').value,
+          text: document.getElementById('text').value,
+        };
+        
+        fetch('/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(payload),
+        })
+        .then(response => response.text())
+        .then(data => {
+          alert('Email sent successfully!');
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+          alert('Failed to send email.');
+        });
+      });
+    </script>
+</body>
+</html>

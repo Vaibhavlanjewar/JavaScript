@@ -28,10 +28,13 @@ p{
     color: aliceblue;
     border-radius: 25px;
     padding: 40px;
-    margin:40px 20px 20px 410px;
+    margin:40px 20px 20px 200px;
     display : inline-block;
     box-shadow: 6px 6px 10px rgb(61, 54, 97);
    text-align: center;
    
 }
 
+#sn{
+    text-align: center;
+}
